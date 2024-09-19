@@ -13,7 +13,7 @@ function Services() {
 
   // Fetch parking data from the backend
   useEffect(() => {
-    axios.get('https://car-parking-management-ltinjs86l-tanayas-projects-fc9d6c88.vercel.app/api/parking/getParking')
+    axios.get('https://new-website-p78i.vercel.app/api/parking/getParking')
 
       .then(response => {
         if (response.data && response.data.length > 0 && response.data[0].floors) {
@@ -42,7 +42,7 @@ function Services() {
       vehicles: floor.vehicles,
     }));
 
-    axios.post('https://car-parking-management-ltinjs86l-tanayas-projects-fc9d6c88.vercel.app/api/parking/saveParking', { floors: floorsWithFloorField })
+    axios.post('https://new-website-p78i.vercel.app/api/parking/saveParking', { floors: floorsWithFloorField })
 
       .then(response => console.log('Parking data saved:', response.data))
       .catch(error => console.error('Error saving parking data:', error));
